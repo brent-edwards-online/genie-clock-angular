@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Genie Clock</title>
+    
+    <link href="css/lib/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
+    <link href="css/styles.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+
+      <div id="main-section"  ng-app="genieClockApp" ng-controller="clockCtrl">
+          <div id="heading">
+            <h1>Welcome to Genie Clock</h1>
+            <p>Coding Test By Brent Edwards</>
+          </div>
+          <div id="time-entry"> 
+            <p>Enter the time in 24hr format: hh:mm</p>
+            <input id="input-time" placeholder="hh:mm" ng-model="timestring" ng-blur="parseTime()">
+            <div id="time-string-error" ng-if="timestringerror" class="text-danger">Please enter the time in 24hr format.</div>
+          </div>
+          
+`         <div id="circular-clock-face">
+            <div ng-repeat="digit in digits">
+              <div class="clock-digit" ng-style="{left:digit.xpos, top: digit.ypos, background: digit.bkgd, color: digit.color}"><div class="content">{{digit.char}}</div></div>
+            </div> 
+          </div>
+      </div>
+
+    
+    <script src= "js/lib/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="js/lib/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/lib/angular.min.js" type="text/javascript"></script>
+    <script src="js/genieclock.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+#main-section{
+  position: absolute;
+  background: url('../../images/home-banner.png') no-repeat center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#heading{
+  h1, p{
+    font-family: 'BaskervilleMTW01-Roman', serif; 
+    padding-left: auto;
+    padding-right: auto;
+    text-align: center;
+  }
+
+  width: 50%;
+  margin-top: 10%;  
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+#time-entry {
+  p{
+    color: #fff;
+    
+  }
+  input{
+     color: black;
+     text-align: center;
+  }
+
+  text-align: center;
+} 
+
+#time-string-error{
+  margin: 10px;
+}
+
+@media only screen and (max-width: 350x) {
+  #circular-clock-face{
+    margin: 10px;
+  }
+}
+
+#circular-clock-face{
+  position: relative;
+  margin: 20px auto 10px auto;
+  text-align: center;
+  max-width: 200px;
+  height: 200px;
+    
+  .clock-digit{
+    color: #000;
+    background: #fff;
+    position: absolute;
+    width: 30px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.3em;
+  }
+
+  .clock-digit:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  .content {
+    margin-top: 2px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding:0;  
+  }
+}
+
+
+
